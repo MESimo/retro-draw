@@ -1,20 +1,12 @@
 import React from 'react';
 import Cell from './Cell';
 
-
-/**
- * The Grid component represents the interface for displaying clickable
- * color cells, and needs to update the color of a clicked cell from the
- * activeColor when a user clicks on it.
- */
 const Grid = (props) => {
-  /**
-   * Create constants for activeColor, cellList, and setCellList, reading the value off of the props
-   */
+ 
   const activeColor = props.activeColor;
   const cellList = props.cellList;
   const setCellList = props.setCellList;
-
+  
   
   /**
    * For the template you need to:
@@ -31,17 +23,16 @@ const Grid = (props) => {
     {
       cellList.map((cell, index) => {
         return <Cell 
-                key={'grid' + index}
+                key={'grid-' + index}
                 color={cell.color}
-                handleClick={() => {
+                handleMouse={() => {
                 let cellListCopy = [ ...cellList ];
                 console.log(cellListCopy)
                 cellListCopy[index].color = activeColor;
                 setCellList(cellListCopy);
-                }}/>
-      }
-
-      )
+                }}
+                />
+      })
     }
   </div>
 }

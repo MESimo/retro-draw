@@ -1,19 +1,12 @@
 import React from 'react';
 import Cell from './Cell';
-
-/* Need to map over the COLORS array, so we pull them from ../utils */
 import { COLORS } from '../utils';
 
 /**
- * The Palette component represents the interface for displaying
- * clickable color cells, and needs to communicate the activeColor
- * to other components. 
+ * The Palette component needs to communicate the activeColor to other components. 
  */
 const Palette = (props) => {
-  /**
-   * Create constants for activeColor and setActiveColor, reading the value off of the props
-   */
-  console.log(props)
+ 
   const activeColor = props.activeColor;
   const setActiveColor = props.setActiveColor;
 

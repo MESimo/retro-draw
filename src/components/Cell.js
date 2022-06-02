@@ -14,6 +14,8 @@ const Cell = (props) => {
   const color = props.color;
   const isActive = props.isActive;
   const handleClick = props.handleClick;
+  const handleMouse = props.handleMouse;
+
   /**
    * For the template you need to
    * - set the className to be "cell active" if the value of isActive
@@ -27,7 +29,9 @@ const Cell = (props) => {
     <div 
       className={isActive === true ? 'cell active' : 'cell'}
       style={{backgroundColor: color}}
-      onClick={handleClick}></div>
+      onClick={handleClick}
+      onMouseDown={handleMouse}>
+    </div>
   )
 }
 

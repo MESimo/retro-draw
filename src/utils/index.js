@@ -20,7 +20,7 @@ export const COLORS = [
 export function buildCellList() {
   const cellList = [];
 
-  for (let i = 0; i < 64; i++) {
+  for (let i = 0; i < 81; i++) {
     cellList.push({
       color: null
     });
